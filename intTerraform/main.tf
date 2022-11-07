@@ -32,15 +32,6 @@ resource "aws_vpc" "test-vpc" {
   }
 }
 
-# VPC
-resource "aws_vpc" "test-vpc" {
-  cidr_block           = "172.19.0.0/16"
-  enable_dns_hostnames = "true"
- 
-  tags = {
-    "Name" : "instance_vpc"
-  }
-}
 
 output "instance_ip" {
   value = aws_instance.web_server01.public_ip
