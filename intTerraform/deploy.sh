@@ -20,6 +20,7 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome-stable_current_amd64.deb -y
 sleep 3
 cd /kuralabs_deployment_3/cypress_test
+sudo apt install -y nodejs npm maven libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb
 npm install
 npm install cypress --save-dev
 NO_COLOR=1 npx cypress run --config video=false --spec ./cypress/e2e/test.cy.js
